@@ -24,7 +24,7 @@ body.content {
 }
 
 h1.title {
-  align-self: flex-start;
+  text-align: center;
   font-size: 40px;
   font-weight: 700;
   color: #162029;
@@ -33,7 +33,7 @@ h1.title {
 }
 
 p.desc {
-  align-self: flex-start;
+  text-align: center;
   font-size: 20px;
   font-weight: 500;
   color: #34363C;
