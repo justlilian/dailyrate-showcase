@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FiArrowUpRight } from 'react-icons/fi'
 
+import Button from '../Button'
 import styles from './css/Header.module.css'
 
 export default function Header() {
@@ -13,10 +14,12 @@ export default function Header() {
       <a className={styles.twitter}>
         <Image src='/images/twitter.svg' width={22} height={22} />
       </a>
-      <a className={styles.join}>
-        Rejoindre l&apos;aventure
-        <FiArrowUpRight size={13} />
-      </a>
+      <Button 
+        dark
+        react_icon={FiArrowUpRight}
+        text="Rejoindre l'aventure"
+        shape='oval'
+      />
     </header>
   )
 }

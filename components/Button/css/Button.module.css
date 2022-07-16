@@ -4,17 +4,28 @@ a.button {
   white-space: nowrap;
   font-size: 10px;
   font-weight: 700;
-  border-radius: 4px;
+  border-radius: 6px;
+  width: fit-content;
+
+  display: inline-flex;
+  gap: 3px;
+  align-items: center;
 }
 
-a.primary {
-  background: linear-gradient(90deg, #9CF29D 0%, #6DCAC9 100%);
-  color: #2F1D3A;
+a.button.spaced {
+  gap: 8px;
 }
 
+/* Shape */
+a.button.oval {
+  border-radius: 20px;
+}
+a.button.large {
+  padding: 10px 12px;
+}
 
 /* Click Animation */
-.primary:after {
+a.button:after {
   content: "";
   display: block;
   position: absolute;
@@ -25,11 +36,11 @@ a.primary {
   height: 100%;
   opacity: 0;
   transition: all 0.5s;
-  box-shadow: 0 0 10px 40px #9CF29D;
+  box-shadow: 0 0 10px 40px #fff;
 }
 
-.primary:active:after {
-  box-shadow: 0 0 0 0 #9CF29D;
+a.button:active:after {
+  box-shadow: 0 0 0 0 #fff;
   position: absolute;
   border-radius: 4em;
   left: 0;
@@ -38,6 +49,50 @@ a.primary {
   transition: 0s;
 }
 
-.primary:active {
+a.button:active {
   top: 1px;
+}
+
+/* Primary theme */
+a.primary {
+  background: linear-gradient(90deg, #9CF29D 0%, #6DCAC9 100%);
+  color: #2F1D3A;
+}
+
+a.primary:after {
+  box-shadow: 0 0 10px 40px #9CF29D;
+}
+
+a.primary:active:after {
+  box-shadow: 0 0 0 0 #9CF29D;
+}
+
+/* Secondary theme */
+a.secondary {
+  background: transparent;
+  border: 1.5px solid #434856;
+  color: #34363C;
+}
+
+a.secondary:after {
+  box-shadow: 0 0 10px 40px transparent;
+}
+
+a.secondary:active:after {
+  box-shadow: 0 0 0 0 transparent;
+}
+
+
+/* Dark theme */
+a.dark {
+  background: #292C35;
+  color: #fff;
+}
+
+a.dark:after {
+  box-shadow: 0 0 10px 40px transparent;
+}
+
+a.dark:active:after {
+  box-shadow: 0 0 0 0 transparent;
 }

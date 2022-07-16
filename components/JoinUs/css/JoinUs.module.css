@@ -1,5 +1,10 @@
 form.container {
   padding: 2rem 20px;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 span.about {
@@ -12,9 +17,9 @@ article.input_wrapper {
   position: relative;
   background: #434856;
   border: .5px solid #4D4E54;
-  border-radius: 5px;
-  margin: 10px 0;
-  height: 38px;
+  border-radius: 6px;
+  margin: 10px 0 5px 0;
+  height: 40px;
   padding: 0 2px;
 
   display: flex;
@@ -35,4 +40,17 @@ input.input {
 input.input::placeholder {
   font-size: 11px;
   color: #C7CAD1;
+}
+
+span.or {
+  text-align: center;
+  color: #9295A0;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+article.contact_wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 6px;
 }
