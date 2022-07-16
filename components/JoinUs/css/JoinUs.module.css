@@ -1,0 +1,33 @@
+form.container {
+  padding: 2rem 20px;
+}
+
+span.about {
+  color: #9295A0;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+article.input_wrapper {
+  position: relative;
+  background: #434856;
+  border: .5px solid #4D4E54;
+  border-radius: 5px;
+  margin: 10px 0;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+}
+
+input.input {
+  height: 85%;
+  margin: 0 4px;
+  flex-grow: 1;
+  background: transparent;
+  border: 0;
+}
+
+input.input::placeholder {
+  color: #C7CAD1;
+}

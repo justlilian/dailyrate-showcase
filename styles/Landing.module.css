@@ -1,0 +1,45 @@
+div.container {
+  position: relative;
+  padding: 40px 30px;
+}
+
+span.hello {
+  background: #E6E6E6;
+  color: #8F91A3;
+  padding: 0px 12px;
+  font-size: 10px;
+  font-weight: 700;
+
+  display: flex;
+  width: fit-content;
+  gap: 5px;
+  align-items: center;
+  border-radius: 7px;
+}
+
+body.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1.title {
+  align-self: flex-start;
+  font-size: 40px;
+  font-weight: 700;
+  color: #162029;
+  line-height: 95%;
+  margin-bottom: 17px;
+}
+
+p.desc {
+  align-self: flex-start;
+  font-size: 20px;
+  font-weight: 500;
+  color: #34363C;
+  line-height: 110%;
+  width: 100%;
+  padding: 0 0 0 2px;
+  margin: 6px 0;
+}
+
