@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 import Header from '../components/Header'
+import Footer from '../components/Footer'
 import JoinUs from '../components/JoinUs'
 import styles from '../styles/Landing.module.css'
 
@@ -33,12 +34,27 @@ export default function Home() {
             en analysant le marché — de très près. 🔍
           </p>
           <JoinUs />
+          
+          <section className={styles.highlights}>
+            <article className={styles.clarity}>
+              <Image src='/ui/clarity.png' layout='fill'/>
+            </article>
+            <article className={styles.integrations}>
+              <Image src='/ui/integrations.png' layout='fill'/>
+            </article>
+            <article className={styles.customization}>
+              <Image src='/ui/customization.png' layout='fill'/>
+            </article>
+            <article className={styles.insights}>
+              <Image src='/ui/insights.png' layout='fill'/>
+            </article>
+          </section>
+
+          <JoinUs/>
         </body>
       </main>
 
-      <footer className={styles.footer}>
-        
-      </footer>
+      <Footer />
     </div>
   )
 }

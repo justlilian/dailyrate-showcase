@@ -43,3 +43,35 @@ p.desc {
   margin: 6px 0;
 }
 
+section.highlights {
+
+}
+
+article.clarity {
+  position: relative;
+  width: 90vw;
+  height: 50.56vw;
+  margin: 15px 0;
+}
+
+article.integrations {
+  position: relative;
+  width: 90vw;
+  height: 32.37vw;
+  margin: 15px 0;
+}
+
+article.customization {
+  position: relative;
+  width: 90vw;
+  height: 88.06vw;
+  margin: 15px 0;
+}
+
+article.insights {
+  position: relative;
+  width: 90vw;
+  height: 71.43vw;
+  margin: 15px 0;
+}
+

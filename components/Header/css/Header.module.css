@@ -11,15 +11,3 @@ a.twitter {
   margin-right: 7px;
   padding-top: 5px;
 }
-
-a.join {
-  background: #292C35;
-  color: #fff;
-  padding: 10px 12px;
-  border-radius: 20px;
-  font-size: 10px;
-  
-  display: inline-flex;
-  gap: 3px;
-  align-items: center;
-}
