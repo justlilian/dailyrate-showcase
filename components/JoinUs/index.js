@@ -2,9 +2,12 @@ import Button from '../Button'
 
 import styles from './css/JoinUs.module.css'
 
-export default function JoinUs() {
+export default function JoinUs( props ) {
   return (
-    <form className={styles.container}>
+    <form className={`
+      ${styles.container}
+      ${props.mobile_only ? styles.mobile_only : ''}
+    `}>
       <span className={styles.about}>
         Intéressé ? Rejoignez nous maintenant 👇 et bénéficiez d’un <u>accès prioritaire !</u>
       </span>

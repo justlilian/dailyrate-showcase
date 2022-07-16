@@ -15,7 +15,7 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <main>
+      <main className={styles.landing}>
         <Header />
         <span className={styles.hello}>
           <Image src='/emotes/👋🏼.png' width={20} height={20} />
@@ -35,22 +35,20 @@ export default function Home() {
           </p>
           <JoinUs />
           
-          <section className={styles.highlights}>
-            <article className={styles.clarity}>
-              <Image src='/ui/clarity.png' layout='fill'/>
-            </article>
-            <article className={styles.integrations}>
-              <Image src='/ui/integrations.png' layout='fill'/>
-            </article>
-            <article className={styles.customization}>
-              <Image src='/ui/customization.png' layout='fill'/>
-            </article>
-            <article className={styles.insights}>
-              <Image src='/ui/insights.png' layout='fill'/>
-            </article>
-          </section>
+          <article className={styles.clarity}>
+            <Image src='/ui/clarity.png' layout='fill'/>
+          </article>
+          <article className={styles.integrations}>
+            <Image src='/ui/integrations.png' layout='fill'/>
+          </article>
+          <article className={styles.customization}>
+            <Image src='/ui/customization.png' layout='fill'/>
+          </article>
+          <article className={styles.insights}>
+            <Image src='/ui/insights.png' layout='fill'/>
+          </article>
 
-          <JoinUs/>
+          <JoinUs mobile_only />
         </body>
       </main>
 

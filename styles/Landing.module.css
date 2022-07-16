@@ -3,6 +3,10 @@ div.container {
   padding: 40px 30px;
 }
 
+main.landing {
+  min-height: 100vh;
+}
+
 span.hello {
   background: #E6E6E6;
   color: #8F91A3;
@@ -43,10 +47,6 @@ p.desc {
   margin: 6px 0;
 }
 
-section.highlights {
-
-}
-
 article.clarity {
   position: relative;
   width: 90vw;
@@ -73,5 +73,138 @@ article.insights {
   width: 90vw;
   height: 71.43vw;
   margin: 15px 0;
+}
+
+@media screen and (min-width: 1000px) {
+  div.container {
+    padding: 30px 100px;
+  }
+
+  span.hello {
+    margin-top: 7rem;
+  }
+
+  h1.title {
+    font-size: 50px;
+  }
+
+  p.desc {
+    width: 50%;
+  }
+
+  h1.title, p.desc {
+    text-align: left;
+    align-self: flex-start;
+  }
+
+  article.integrations {
+    position: absolute;
+    margin: 0;
+    transform: scale(.3);
+    top: 18px;
+    left: 20vw;
+  }
+
+  article.clarity {
+    position: absolute;
+    margin: 0;
+    transform: scale(.35);
+    top: 80px;
+    right: -20vw;
+  }
+
+  article.customization {
+    position: absolute;
+    margin: 0;
+    transform: scale(.2);
+    top: 80px;
+    right: -27vw;
+  }
+
+  article.insights {
+    position: absolute;
+    margin: 0;
+    transform: scale(.2);
+    top: 160px;
+    right: -8vw;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+
+  main.landing {
+    min-height: 110vh;
+  }
+
+  span.hello {
+    margin-top: 5rem;
+  }
+
+  h1.title {
+    font-size: 70px;
+  }
+
+  article.integrations {
+    top: -30px;
+    left: 20vw;
+  }
+
+  article.clarity {
+    top: 42px;
+    right: -20vw;
+  }
+
+  article.customization {
+    top: 35px;
+    right: -27vw;
+  }
+
+  article.insights {
+    top: 130px;
+    right: -8vw;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+
+  h1.title {
+    font-size: 80px;
+  }
+
+  main.landing {
+    min-height: calc(100vh + 2rem);
+  }
+
+  article.integrations {
+    top: 100px;
+    left: 55vw;
+    width: 481px;
+    height: 173px;
+    transform: scale(1);
+  }
+
+  article.clarity {
+    top: 280px;
+    left: 60vw;
+    width: 481px;
+    height: 269px;
+    transform: scale(1);
+  }
+
+  article.customization {
+    top: 555px;
+    left: 70vw;
+    width: 263px;
+    height: 258px;
+    transform: scale(1);
+  }
+
+  article.insights {
+    top: 555px;
+    left: 50vw;
+    width: 263px;
+    height: 208px;
+    transform: scale(1);
+  }
 }
 
