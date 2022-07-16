@@ -1,6 +1,4 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import { FiArrowUpRight } from 'react-icons/fi'
+import Button from '../Button'
 
 import styles from './css/JoinUs.module.css'
 
@@ -17,6 +15,7 @@ export default function JoinUs() {
           type="text"
           placeholder='Addresse e-mail'
         />
+        <Button primary text="Rejoindre l'aventure" />
       </article>
       
     </form>

@@ -1,3 +1,5 @@
+import { useMemo } from 'react'
+
 import styles from './css/Button.module.css'
 
 export default function Button( props ) {
@@ -11,8 +13,10 @@ export default function Button( props ) {
   }, [props.primary, props.secondary])
 
   return (
-    <a className={`${styles.wrapper} ${type}`}>
-      { props.children }
+    <a
+      className={`${styles.button} ${type}`}
+      onClick={props.onClick}>
+        { props.text }
     </a>
   )
 }
