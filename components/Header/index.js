@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Link from 'next/link'
+import Anchor from '../Anchor'
 import { FiArrowUpRight } from 'react-icons/fi'
 
 import Button from '../Button'
@@ -8,12 +8,12 @@ import styles from './css/Header.module.css'
 export default function Header() {
   return (
     <header className={styles.header}>
-      <Link href='/'>
+      <Anchor href='/'>
         <Image src='/images/hero.svg' width={140} height={38}/>
-      </Link>
-      <a className={styles.twitter}>
+      </Anchor>
+      <Anchor className={styles.twitter} href='https://twitter.com/_justlilian'>
         <Image src='/images/twitter.svg' width={22} height={22} />
-      </a>
+      </Anchor>
       <Button 
         dark
         react_icon={FiArrowUpRight}
