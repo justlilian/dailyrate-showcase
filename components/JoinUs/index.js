@@ -2,6 +2,7 @@ import toast from 'react-hot-toast'
 import joi from 'joi'
 import { useState } from 'react'
 
+import api from '../../utils/requests'
 import Button from '../Button'
 import styles from './css/JoinUs.module.css'
 
@@ -9,12 +10,15 @@ export default function JoinUs( props ) {
 
   const [email, setEmail] = useState('')
 
-  const handleJoin = () => {
+  const handleJoin = async () => {
     const isEmail = joi.string().email({ tlds: { allow: false }})
     if(isEmail.validate( email ).error) {
       toast.error('Oops, email invalide')
     } else {
-      toast.success('Bienvenue !')
+      toast.promise(api.subscribe( email ), {
+        success: 'Bienvenue !',
+        error: 'Oops, email invalide'
+      })
     }
   }
 

@@ -5,7 +5,7 @@ import { Toaster } from 'react-hot-toast'
 import PopupProvider from '../components/Popup'
 import '../styles/globals.css'
 
-splitbee.init()
+splitbee.init({ token: process.env.SPLITBEE_TOKEN })
 
 export default function App({ Component, pageProps }) {
   const [showChild, setShowChild] = useState(false);
