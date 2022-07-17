@@ -16,6 +16,7 @@ export default function JoinUs( props ) {
       toast.error('Oops, email invalide')
     } else {
       toast.promise(api.subscribe( email ), {
+        loading: 'Envoi en cours',
         success: 'Bienvenue !',
         error: 'Oops, email invalide'
       })

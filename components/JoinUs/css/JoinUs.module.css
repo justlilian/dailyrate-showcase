@@ -96,6 +96,10 @@ article.contact_wrapper {
     flex-wrap: wrap;
   }
 
+  span.about {
+    width: 100%;
+  }
+
   article.input_wrapper {
     flex-grow: 1;
     margin-right: 4px;
