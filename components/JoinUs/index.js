@@ -46,7 +46,12 @@ export default function JoinUs( props ) {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <Button primary text="Rejoindre l'aventure" onClick={handleJoin}/>
+        <Button
+          primary
+          text="Rejoindre l'aventure"
+          onClick={handleJoin}
+          data={{ email }}
+        />
       </article>
       <span className={styles.or}>ou</span>
       <article className={styles.contact_wrapper}>

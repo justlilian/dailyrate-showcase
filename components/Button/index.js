@@ -23,7 +23,7 @@ export default function Button( props ) {
   const handleClick = e => {
     e.stopPropagation()
     if(props.text) {
-      splitbee.track( props.text )
+      splitbee.track( props.text, props.data || {})
     }
     if(props.onClick) {
       props.onClick()
