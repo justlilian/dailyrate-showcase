@@ -2,7 +2,6 @@ import toast from 'react-hot-toast'
 import joi from 'joi'
 import { useState } from 'react'
 
-import api from '../../utils/requests'
 import Button from '../Button'
 import styles from './css/JoinUs.module.css'
 
@@ -15,11 +14,7 @@ export default function JoinUs( props ) {
     if(isEmail.validate( email ).error) {
       toast.error('Oops, email invalide')
     } else {
-      toast.promise(api.subscribe( email ), {
-        loading: 'Envoi en cours',
-        success: 'Bienvenue !',
-        error: 'Oops, email invalide'
-      })
+      toast.success('Bienvenue !');
     }
   }
 
