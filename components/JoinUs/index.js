@@ -1,8 +1,22 @@
-import Button from '../Button'
+import toast from 'react-hot-toast'
+import joi from 'joi'
+import { useState } from 'react'
 
+import Button from '../Button'
 import styles from './css/JoinUs.module.css'
 
 export default function JoinUs( props ) {
+
+  const [email, setEmail] = useState('')
+
+  const handleJoin = () => {
+    const isEmail = joi.string().email({ tlds: { allow: false }})
+    if(isEmail.validate( email ).error) {
+      toast.error('Oops, email invalide')
+    } else {
+      toast.success('Bienvenue !')
+    }
+  }
 
   const handleContact = () => {
     const a = document.createElement('a');
@@ -24,8 +38,10 @@ export default function JoinUs( props ) {
           className={styles.input}
           type="text"
           placeholder='Addresse e-mail'
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
-        <Button primary text="Rejoindre l'aventure" />
+        <Button primary text="Rejoindre l'aventure" onClick={handleJoin}/>
       </article>
       <span className={styles.or}>ou</span>
       <article className={styles.contact_wrapper}>
