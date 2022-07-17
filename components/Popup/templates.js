@@ -7,13 +7,13 @@ import styles from './css/Popup.module.css'
 function JoinForm () {
   return <>
     <div className={styles.imageWrapper}>
-      <Image src='/gifs/typing.gif' layout='fill' />
+      <Image src='/gifs/typing.gif' layout='fill' objectFit='contain'/>
     </div>
     <h1>Rejoignez-nous !</h1>
-    <JoinUs />
+    <JoinUs force_center />
   </>
 }
 
 export default {
-  'join-us': JoinForm
+  'join-us': <JoinForm />
 }

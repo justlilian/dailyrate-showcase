@@ -38,7 +38,12 @@ export default function Button( props ) {
         ${ props.shape === 'oval' ? styles.oval : '' }
         ${ props.icon_before ? styles.spaced : ''}
       `}
-      onClick={props.onClick}>
+      onClick={e => {
+        e.stopPropagation()
+        if(props.onClick) {
+          props.onClick()
+        }
+      }}>
         { props.icon_before &&
           <Icon />
         }

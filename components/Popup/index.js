@@ -1,7 +1,6 @@
 import { IoIosClose } from 'react-icons/io'
-import { useMemo, useEffect } from 'react'
+import { useMemo } from 'react'
 
-import scroll from '../../utils/scroll'
 import usePopup from './store'
 import styles from './css/Popup.module.css'
 
@@ -11,14 +10,14 @@ export default function Popup ( ) {
 
   const active = useMemo(() => stack.length > 0, [stack]);
 
-  useEffect(() => {
-    if(active) {
-      scroll.disable();
-    } else {
-      scroll.enable();
-    }
-    return scroll.enable;
-  }, [active])
+  const handleClick = (e) => {
+    e.stopPropagation()
+  }
+
+  const handleClose = (e) => {
+    e.stopPropagation()
+    close()
+  }
 
   return <div
     className={`${styles.wrapper} ${active ? styles.active : ''}`}
@@ -26,9 +25,9 @@ export default function Popup ( ) {
   >
     {
       active && 
-      <section className={styles.popup} >
-        <div className={styles.close} onClick={close}>
-          <IoIosClose size={20} />
+      <section className={styles.popup} onClick={handleClick}>
+        <div className={styles.close} onClick={handleClose}>
+          <IoIosClose size={25} />
         </div>
         <article className={styles.content}>
           { stack[0] }

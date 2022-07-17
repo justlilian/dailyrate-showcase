@@ -7,6 +7,7 @@ export default function JoinUs( props ) {
     <form className={`
       ${styles.container}
       ${props.mobile_only ? styles.mobile_only : ''}
+      ${props.force_center ? styles.force_center : ''}
     `}>
       <span className={styles.about}>
         Intéressé ? Rejoignez nous maintenant 👇 et bénéficiez d’un <u>accès prioritaire !</u>

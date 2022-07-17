@@ -71,6 +71,16 @@ article.contact_wrapper {
     display: none;
   }
 
+  form.container.force_center {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+  }
+  
+  form.container.force_center > * {
+    width: 80%;
+  }
+
 }
 
 @media screen and (min-width: 1200px) {
@@ -95,4 +105,5 @@ article.contact_wrapper {
   article.contact_wrapper {
     padding-left: auto;
   }
+
 }
