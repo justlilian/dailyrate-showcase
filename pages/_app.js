@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react'
+
+import PopupProvider from '../components/Popup'
 import '../styles/globals.css'
 
 export default function App({ Component, pageProps }) {
@@ -14,8 +16,9 @@ export default function App({ Component, pageProps }) {
   if (typeof window === 'undefined') {
     return <></>;
   } else {
-    return (
+    return <>
       <Component {...pageProps} />
-    );
+      <PopupProvider />
+    </>
   }
 }
