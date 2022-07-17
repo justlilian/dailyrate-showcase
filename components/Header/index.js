@@ -21,7 +21,7 @@ export default function Header() {
       <Button
         dark
         react_icon={FiArrowUpRight}
-        text="Rejoindre l'aventure"
+        text="Nous rejoindre"
         shape='oval'
         onClick={() => open('join-us')}
       />
