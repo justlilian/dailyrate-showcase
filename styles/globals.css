@@ -11,6 +11,15 @@ body {
   scroll-behavior: smooth;
 }
 
+h1 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  color: #162029;
+  line-height: 95%;
+  margin-bottom: 17px;
+}
+
 a {
   color: inherit;
   text-decoration: none;

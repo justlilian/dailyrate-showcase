@@ -2,10 +2,14 @@ import Image from 'next/image'
 import Anchor from '../Anchor'
 import { FiArrowUpRight } from 'react-icons/fi'
 
+import usePopup from '../Popup/store'
 import Button from '../Button'
 import styles from './css/Header.module.css'
 
 export default function Header() {
+
+  const open = usePopup((state) => state.open)
+
   return (
     <header className={styles.header}>
       <Anchor href='/'>
@@ -19,6 +23,7 @@ export default function Header() {
         react_icon={FiArrowUpRight}
         text="Rejoindre l'aventure"
         shape='oval'
+        onClick={() => open('join-us')}
       />
     </header>
   )

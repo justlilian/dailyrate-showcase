@@ -17,8 +17,8 @@ export default function App({ Component, pageProps }) {
     return <></>;
   } else {
     return <>
-      <Component {...pageProps} />
       <PopupProvider />
+      <Component {...pageProps} />
     </>
   }
 }

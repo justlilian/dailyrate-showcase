@@ -9,20 +9,22 @@ div.wrapper {
   align-items: center;
   top: 0;
   left: 0;
+  z-index: 1000;
 }
 
 div.wrapper.active {
   display: flex;
 }
 
-div.wrapper.active ~ * {
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-}
-
 section.popup {
-
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  max-width: 96vw;
+  max-height: 94vh;
+  padding: 50px 20px;
+  border: 0.775047px solid #4D4E54;
+  border-radius: 10px;
 }
 
 div.close {
@@ -30,5 +32,9 @@ div.close {
 }
 
 article.content {
+  display: flex;
+}
+
+div.imageWrapper {
 
 }
