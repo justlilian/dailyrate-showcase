@@ -3,6 +3,13 @@ import Button from '../Button'
 import styles from './css/JoinUs.module.css'
 
 export default function JoinUs( props ) {
+
+  const handleContact = () => {
+    const a = document.createElement('a');
+    a.href = 'mailto:hello@dailyrate.io';
+    a.click();
+  }
+
   return (
     <form className={`
       ${styles.container}
@@ -27,6 +34,7 @@ export default function JoinUs( props ) {
           text='Nous contacter'
           icon={'/emotes/🌍.png'}
           icon_before
+          onClick={handleContact}
         />
       </article>
     </form>

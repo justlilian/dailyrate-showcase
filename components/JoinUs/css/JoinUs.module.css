@@ -81,6 +81,10 @@ article.contact_wrapper {
     width: 80%;
   }
 
+  form.container.force_center > span.or {
+    display: block;
+  }
+
 }
 
 @media screen and (min-width: 1200px) {

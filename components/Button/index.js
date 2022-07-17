@@ -1,5 +1,6 @@
 import { useMemo } from 'react'
 import Image from 'next/image'
+import splitbee from '@splitbee/web'
 
 import styles from './css/Button.module.css'
 
@@ -18,6 +19,16 @@ export default function Button( props ) {
     }
     return res;
   }, [props.primary, props.secondary])
+
+  const handleClick = e => {
+    e.stopPropagation()
+    if(props.text) {
+      splitbee.track( props.text )
+    }
+    if(props.onClick) {
+      props.onClick()
+    }
+  }
 
   const Icon = () => {
     return <>
@@ -38,12 +49,7 @@ export default function Button( props ) {
         ${ props.shape === 'oval' ? styles.oval : '' }
         ${ props.icon_before ? styles.spaced : ''}
       `}
-      onClick={e => {
-        e.stopPropagation()
-        if(props.onClick) {
-          props.onClick()
-        }
-      }}>
+      onClick={handleClick}>
         { props.icon_before &&
           <Icon />
         }

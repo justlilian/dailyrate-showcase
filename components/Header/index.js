@@ -18,7 +18,7 @@ export default function Header() {
       <Anchor className={styles.twitter} href='https://twitter.com/_justlilian'>
         <Image src='/images/twitter.svg' width={22} height={22} />
       </Anchor>
-      <Button 
+      <Button
         dark
         react_icon={FiArrowUpRight}
         text="Rejoindre l'aventure"
