@@ -1,6 +1,7 @@
 import { useMemo } from 'react'
 import Image from 'next/image'
 import splitbee from '@splitbee/web'
+import { motion } from 'framer-motion'
 
 import styles from './css/Button.module.css'
 
@@ -42,23 +43,25 @@ export default function Button( props ) {
   }
 
   return (
-    <a
-      className={`
-        ${styles.button}
-        ${type} ${ props.icon || props.react_icon ? styles.large : ''}
-        ${ props.shape === 'oval' ? styles.oval : '' }
-        ${ props.icon_before ? styles.spaced : ''}
-      `}
-      onClick={handleClick}>
-        { props.icon_before &&
-          <Icon />
-        }
-        { props.text }
-        {
-          !props.icon_before &&
-          <Icon />
-        }
-        
-    </a>
+    <motion.div whileHover={{ scale: 0.98 }}>
+      <a
+        className={`
+          ${styles.button}
+          ${type} ${ props.icon || props.react_icon ? styles.large : ''}
+          ${ props.shape === 'oval' ? styles.oval : '' }
+          ${ props.icon_before ? styles.spaced : ''}
+        `}
+        onClick={handleClick}>
+          { props.icon_before &&
+            <Icon />
+          }
+          { props.text }
+          {
+            !props.icon_before &&
+            <Icon />
+          }
+      </a>
+    </motion.div>
+    
   )
 }

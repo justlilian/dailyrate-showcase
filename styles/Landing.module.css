@@ -67,6 +67,7 @@ article.insights {
 }
 
 @media screen and (min-width: 1000px) {
+
   div.container {
     padding: 30px 100px;
   }

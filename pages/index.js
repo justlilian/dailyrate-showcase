@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import JoinUs from '../components/JoinUs'
+import Reveal from '../components/Reveal'
 import styles from '../styles/Landing.module.css'
 
 export default function Home() {
@@ -36,16 +37,24 @@ export default function Home() {
           <JoinUs />
           
           <article className={styles.clarity}>
-            <Image src='/ui/clarity.png' layout='fill'/>
+            <Reveal>
+              <Image src='/ui/clarity.png' layout='fill'/>
+            </Reveal>
           </article>
           <article className={styles.integrations}>
-            <Image src='/ui/integrations.png' layout='fill'/>
+            <Reveal>
+              <Image src='/ui/integrations.png' layout='fill'/>
+            </Reveal>
           </article>
           <article className={styles.customization}>
-            <Image src='/ui/customization.png' layout='fill'/>
+            <Reveal>
+              <Image src='/ui/customization.png' layout='fill'/>
+            </Reveal>
           </article>
           <article className={styles.insights}>
-            <Image src='/ui/insights.png' layout='fill'/>
+            <Reveal>
+              <Image src='/ui/insights.png' layout='fill'/>
+            </Reveal>
           </article>
 
           <JoinUs mobile_only />
