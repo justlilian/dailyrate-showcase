@@ -23,17 +23,14 @@ export default function Popup ( ) {
     className={`${styles.wrapper} ${active ? styles.active : ''}`}
     onClick={close}
   >
-    {
-      active && 
-      <section className={styles.popup} onClick={handleClick}>
+    <section className={styles.popup} onClick={handleClick}>
         <div className={styles.close} onClick={handleClose}>
           <IoIosClose size={25} />
         </div>
         <article className={styles.content}>
-          { stack[0] }
+          { stack.length > 0 && stack[0] }
         </article>
       </section>
-    }
   </div>
 }
 

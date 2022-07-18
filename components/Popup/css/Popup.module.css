@@ -2,12 +2,12 @@ div.wrapper {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  display: none;
   justify-content: center;
   align-items: center;
+  display: flex;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: -1000;
 }
 
 div.wrapper ~ * {
@@ -15,7 +15,7 @@ div.wrapper ~ * {
 }
 
 div.wrapper.active {
-  display: flex;
+  z-index: 1000;
 }
 
 div.wrapper.active ~ * {
@@ -35,6 +35,13 @@ section.popup {
   border-radius: 10px;
   background: #fff;
   overflow: auto;
+  transition: all 0s ease-in-out;
+  transform: translateY(-100vh);
+}
+
+div.wrapper.active > section.popup {
+  transition: all .4s cubic-bezier(.47,1.64,.41,.8);
+  transform: translateY(0);
 }
 
 div.close {
