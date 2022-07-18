@@ -32,15 +32,21 @@ export default function Home() {
         
         <body className={styles.content}>
           <h1 className={styles.title}>
-            Louez mieux.<br/>Tout simplement
+            <Reveal>
+              Louez mieux.<br/>Tout simplement
+            </Reveal>
           </h1>
           <p className={styles.desc}>
-            Dailyrate optimise chaque jour les revenus de vos locations 
-            court-terme.
+            <Reveal>
+              Dailyrate optimise chaque jour les revenus de vos locations 
+              court-terme.
+            </Reveal>
           </p>
           <p className={styles.desc}>
-            Notre technologie intelligente détermine le meilleur prix 
-            en analysant le marché — de très près. 🔍
+            <Reveal>
+              Notre technologie intelligente détermine le meilleur prix 
+              en analysant le marché — de très près. 🔍
+            </Reveal>
           </p>
           <JoinUs />
           

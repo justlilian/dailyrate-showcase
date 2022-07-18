@@ -2,6 +2,7 @@ import toast from 'react-hot-toast'
 import joi from 'joi'
 import { useState } from 'react'
 
+import Reveal from '../Reveal'
 import Button from '../Button'
 import styles from './css/JoinUs.module.css'
 
