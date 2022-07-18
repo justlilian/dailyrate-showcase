@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'
@@ -18,10 +19,17 @@ export default function Home() {
 
       <main className={styles.landing}>
         <Header />
-        <span className={styles.hello}>
-          <Image src='/emotes/👋🏼.png' width={20} height={20} />
-          <p>Bonjour</p>
-        </span>
+        <motion.div
+          transition={{ delay: 1 }}
+          animate={{ x: 0, opacity: 1 }} 
+          initial={{ x: -100, opacity: 0 }}
+        >
+          <span className={styles.hello}>
+            <Image src='/emotes/👋🏼.png' width={20} height={20} />
+            <p>Bonjour</p>
+          </span>
+        </motion.div>
+        
         <body className={styles.content}>
           <h1 className={styles.title}>
             Louez mieux.<br/>Tout simplement
